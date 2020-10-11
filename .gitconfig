@@ -1,0 +1,26 @@
+[ghq]
+	root = ~/dev/src/
+
+[user]
+  name = makicamel
+  email = unright@gmail.com
+
+[github]
+  user = makicamel
+
+[pull]
+  rebase = true
+
+[push]
+  default = current
+
+[branch]
+  autosetuprebase = always
+
+[color]
+  ui = true
+
+[alias]
+  co = checkout
+  graph = log --pretty=format:'%Cgreen[%cd] %Cblue%h %Cred<%cn> %Creset%s' --date=short  --decorate --graph --branches --tags
+  today = log --oneline --since='12 hour ago'
