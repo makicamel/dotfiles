@@ -18,7 +18,7 @@ alias opr=git-open-pr.sh
 
 alias be='bundle exec'
 alias ber='bundle exec bin/rspec'
-alias ras='bundle exec rails s -p 3000 -e development -b 0.0.0.0'
+alias ras='RAILS_MAX_WORKERS=0 bundle exec rails s -p 3000 -e development -b 0.0.0.0'
 
 alias ocaml='rlwrap ocaml'
 
