@@ -5,6 +5,8 @@ alias ll='ls -al'
 
 alias g='git'
 alias gl='cd $(ghq list -p | peco)'
+alias d='g diff'
+alias st='g st'
 alias ghub='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 alias cop='git branch --all | tr -d "* " | grep -v -e "->" | peco | sed -e "s+remotes/[^/]*/++g" | xargs git checkout'
 alias diff='git diff'

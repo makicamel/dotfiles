@@ -22,5 +22,6 @@
 
 [alias]
     co = checkout
+    st = status
     graph = log --pretty=format:'%Cgreen[%cd] %Cblue%h %Cred<%cn> %Creset%s' --date=short  --decorate --graph --branches --tags
     today = log --oneline --since='12 hour ago'
