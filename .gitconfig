@@ -1,26 +1,26 @@
 [ghq]
-	root = ~/dev/src/
+    root = ~/dev/src/
 
 [user]
-  name = makicamel
-  email = unright@gmail.com
+    name = makicamel
+    email = unright@gmail.com
 
 [github]
-  user = makicamel
+    user = makicamel
 
 [pull]
-  rebase = true
+    rebase = true
 
 [push]
-  default = current
+    default = current
 
 [branch]
-  autosetuprebase = always
+    autosetuprebase = always
 
 [color]
-  ui = true
+    ui = true
 
 [alias]
-  co = checkout
-  graph = log --pretty=format:'%Cgreen[%cd] %Cblue%h %Cred<%cn> %Creset%s' --date=short  --decorate --graph --branches --tags
-  today = log --oneline --since='12 hour ago'
+    co = checkout
+    graph = log --pretty=format:'%Cgreen[%cd] %Cblue%h %Cred<%cn> %Creset%s' --date=short  --decorate --graph --branches --tags
+    today = log --oneline --since='12 hour ago'
