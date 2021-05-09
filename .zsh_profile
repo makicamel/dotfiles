@@ -1,20 +1,20 @@
-export PATH=$PATH:~/dev/bin
+export PATH=$PATH:$HOME/dev/bin
 # rbenv
-export PATH="$PATH:~/.rbenv/shims"
-export PATH="$PATH:~/.rbenv/bin"
+export PATH="$PATH:$HOME/.rbenv/shims"
+export PATH="$PATH:$HOME/.rbenv/bin"
 # nodenv
-export PATH="$PATH:~/.nodenv/bin"
+export PATH="$PATH:$HOME/.nodenv/bin"
 
 # flutter
-# export PATH=$PATH:~/dev/flutter/bin:~/dev/flutter/bin/cache/dart-sdk/bin
-# export PATH="$PATH:~/.pub-cache/bin"
+# export PATH=$PATH:$HOME/dev/flutter/bin:$HOME/dev/flutter/bin/cache/dart-sdk/bin
+# export PATH="$PATH:$HOME/.pub-cache/bin"
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 eval "$(hub alias -s)"
 
 # nodebrew
-export PATH=$PATH:~/.nodebrew/current/bin
-# To use Homebrews directories rather than ~/.nodebrew
+export PATH=$PATH:$HOME/.nodebrew/current/bin
+# To use Homebrews directories rather than $HOME/.nodebrew
 export NODEBREW_ROOT=/usr/local/var/nodebrew
 
 export CFLAGS="-I/usr/local/Cellar/openssl/1.0.2s/include"
@@ -52,5 +52,5 @@ export PATH="$PATH:/usr/local/opt/gettext/bin"
 export PATH="$PATH:/usr/local/opt/openssl@1.1/bin"
 
 # opam configuration
-test -r ~/.opam/opam-init/init.sh && . ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+test -r $HOME/.opam/opam-init/init.sh && . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 eval $(opam env)
