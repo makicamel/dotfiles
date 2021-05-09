@@ -12,7 +12,6 @@ alias cop='git branch --all | tr -d "* " | grep -v -e "->" | peco | sed -e "s+re
 alias commit='git commit -v'
 alias amend='git commit --amend'
 alias add='git add'
-alias diff='git diff'
 alias dif='git diff'
 alias lg='git log'
 alias push='git push'
