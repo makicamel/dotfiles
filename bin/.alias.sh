@@ -27,6 +27,8 @@ alias ber='bundle exec bin/rspec'
 alias r='rails'
 alias ras='RAILS_MAX_WORKERS=0 bundle exec rails s -p 3000 -e development -b 0.0.0.0'
 
+alias dc='docker-compose'
+
 alias ocaml='rlwrap ocaml'
 
 alias mu='killall afplay'
