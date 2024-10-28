@@ -4,35 +4,23 @@ export PATH="$PATH:$HOME/.rbenv/shims"
 export PATH="$PATH:$HOME/.rbenv/bin"
 # nodenv
 export PATH="$PATH:$HOME/.nodenv/bin"
+export PATH="/usr/local/sbin:$PATH"
 
-# flutter
-# export PATH=$PATH:$HOME/dev/flutter/bin:$HOME/dev/flutter/bin/cache/dart-sdk/bin
-# export PATH="$PATH:$HOME/.pub-cache/bin"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
+eval "$(pyenv init -)"
 eval "$(hub alias -s)"
+eval "$(direnv hook zsh)"
 
 # nodebrew
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 # To use Homebrews directories rather than $HOME/.nodebrew
 export NODEBREW_ROOT=/usr/local/var/nodebrew
 
-export CFLAGS="-I/usr/local/Cellar/openssl/1.0.2s/include"
-export LDFLAGS="-L/usr/local/Cellar/openssl/1.0.2s/lib"
-
-# imagemagick
-export CPPFLAGS="-I/usr/local/opt/imagemagick@6/include:$CPPFLAGS"
-export LDFLAGS="-L/usr/local/opt/imagemagick@6/lib:$LDFLAGS"
-export PATH="$PATH:/usr/local/opt/imagemagick@6/bin"
-export PKG_CONFIG_PATH="/usr/local/Cellar/imagemagick@6/6.9.11-10/lib/pkgconfig"
-# mysql
-export LDFLAGS="-L/usr/local/opt/mysql@5.6/lib:$LDFLAGS"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.6/include:$CPPFLAGS"
-export PATH="$PATH:/usr/local/opt/mysql@5.6/bin"
-
 export LANG=ja_JP.UTF-8
 
-export EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/bin/vim
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
@@ -50,7 +38,5 @@ export PATH="$PATH:/usr/local/opt/gettext/bin"
 
 # link openssl
 export PATH="$PATH:/usr/local/opt/openssl@1.1/bin"
-
-# opam configuration
-test -r $HOME/.opam/opam-init/init.sh && . $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-eval $(opam env)
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"

@@ -19,9 +19,6 @@ endif
 call plug#begin(expand('~/.vim/plugged'))
 Plug 'ayu-theme/ayu-vim'
 Plug 'mattn/vim-starwars'
-"" space + ne -> sidebar
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
 "" ga -> align
 Plug 'junegunn/vim-easy-align'
 "" space + qr -> exec script
@@ -42,8 +39,6 @@ Plug 'scrooloose/syntastic'
 "" delete white space
 Plug 'bronson/vim-trailing-whitespace'
 "" auto complete
-Plug 'sheerun/vim-polyglot'
-Plug 'Valloric/YouCompleteMe'
 Plug 'ervandew/supertab'
 "" html
 Plug 'hail2u/vim-css3-syntax'
@@ -60,38 +55,10 @@ Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 "" space + sh -> vimshell
 ""  Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/deol.nvim'
-"" snippet
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'lambdalisue/gina.vim'
 call plug#end()
 
 filetype plugin indent on
 let mapleader="\<Space>"
-
-"" ultisnip
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsEditSplit="vertical"
-
-"" youcompleteme
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
-let g:ycm_python_binary_path = '/usr/bin/python3'
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
-let g:ycm_auto_trigger = 1
-let g:ycm_min_num_of_chars_for_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_key_list_previous_completion = ['<Up>']
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "ᐅ"
-let g:ycm_key_list_stop_completion = ['<C-y>', '<Enter>']
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:make = 'gmake'
-if exists('make')
-    let g:make = 'make'
-endif
 
 "" auto-format
 au BufWrite * :Autoformat
@@ -108,24 +75,6 @@ let g:airline_skip_empty_sections = 1
 autocmd FileType html imap <buffer><expr><tab>
             \ emmet#isExpandable() ? "\<plug>(emmet-expand-abbr)" :
             \ "\<tab>"
-
-"" nerdtree
-let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
-let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-let g:NERDTreeShowBookmarks=1
-let g:nerdtree_tabs_focus_on_files=1
-let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 30
-let NERDTreeShowHidden=1
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-nnoremap <Leader>dir :NERDTreeTabsToggle<CR>
-autocmd BufWritePre * :FixWhitespace
-augroup NERD
-    au!
-    autocmd VimEnter * NERDTree
-    autocmd VimEnter * wincmd p
-augroup END
 
 "" quickrun
 nnoremap <Leader>go :QuickRun<CR>
@@ -175,7 +124,6 @@ autocmd FileType python setlocal completeopt-=preview
 
 "" syntastic
 let g:syntastic_python_checkers=['python', 'flake8']
-let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
 
 "" vim-airline
