@@ -28,3 +28,5 @@
     ri = rebase --interactive develop
 [rebase]
 	autostash = true
+[init]
+	defaultBranch = main
