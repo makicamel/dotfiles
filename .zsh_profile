@@ -6,7 +6,6 @@ export PATH="$PATH:$HOME/.rbenv/bin"
 export PATH="$PATH:$HOME/.nodenv/bin"
 export PATH="/usr/local/sbin:$PATH"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(rbenv init -)"
 eval "$(nodenv init -)"
 eval "$(pyenv init -)"
@@ -22,11 +21,6 @@ export LANG=ja_JP.UTF-8
 
 export EDITOR=/usr/bin/vim
 
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-    . /usr/local/etc/bash_completion.d/git-prompt.sh
-    . /usr/local/etc/bash_completion.d/git-completion.bash
-fi
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 # mysql-client
