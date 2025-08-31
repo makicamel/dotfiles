@@ -6,6 +6,7 @@ ln -s $DOT_DIR/.vimrc      ~/.vimrc
 ln -s $DOT_DIR/.gitconfig  ~/.gitconfig
 ln -s $DOT_DIR/.zsh_profile ~/.zsh_profile
 ln -s $DOT_DIR/.zshrc      ~/.zshrc
+ln -s $DOT_DIR/karabiner.json   ~/.config/karabiner/karabiner.json
 
 ln -s $BIN_DIR/.alias.sh   ~/dev/bin/.alias.sh
 ln -s $BIN_DIR/git-open-pr.sh   ~/dev/bin/git-open-pr.sh
