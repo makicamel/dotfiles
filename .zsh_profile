@@ -34,3 +34,8 @@ export PATH="$PATH:/usr/local/opt/gettext/bin"
 export PATH="$PATH:/usr/local/opt/openssl@1.1/bin"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+export PICO_SDK_PATH="$HOME/dev/src/github.com/raspberrypi/pico-sdk"
+export PICO_EXTRAS_PATH="$HOME/dev/src/github.com/raspberrypi/pico-extras"
+export PATH="$PATH:/usr/local/opt/arm-none-eabi-binutils/bin"
+export PATH="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin:$PATH"
