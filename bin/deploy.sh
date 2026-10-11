@@ -9,8 +9,8 @@ ln -s $DOT_DIR/.zsh_profile ~/.zsh_profile
 ln -s $DOT_DIR/.zshrc      ~/.zshrc
 ln -s $DOT_DIR/karabiner.json   ~/.config/karabiner/karabiner.json
 
-ln -s $BIN_DIR/.alias.sh   ~/dev/bin/.alias.sh
-ln -s $BIN_DIR/git-open-pr.sh   ~/dev/bin/git-open-pr.sh
+ln -s $BIN_DIR/.alias.sh   ~/bin/.alias.sh
+ln -s $BIN_DIR/git-open-pr.sh   ~/bin/git-open-pr.sh
 
 mkdir ~/openocd
 ln -s $OPENOCD_DIR/openocd-rp2040.cfg ~/openocd/rp2040.cfg
