@@ -16,4 +16,8 @@ mkdir ~/openocd
 ln -s $OPENOCD_DIR/openocd-rp2040.cfg ~/openocd/rp2040.cfg
 ln -s $OPENOCD_DIR/openocd-rp2350.cfg ~/openocd/rp2350.cfg
 
+mkdir ~/openocd
+ln -s $OPENOCD_DIR/openocd-rp2040.cfg ~/openocd/rp2040.cfg
+ln -s $OPENOCD_DIR/openocd-rp2350.cfg ~/openocd/rp2350.cfg
+
 echo 'Symbolic link created.'
